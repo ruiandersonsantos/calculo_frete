@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calcula frete</string>
+    <string name="title_activity_avalie">AvalieActivity</string>
+    <string name="title_activity_resultado">ResultadoActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sem_conexao">SemConexaoActivity</string>
+
+
+</resources>

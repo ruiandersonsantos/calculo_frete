@@ -1,0 +1,287 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:orientation="vertical"
+        tools:context="ruianderson.com.br.calculafrete.CalculoActivity">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sp_servico" />
+
+        <TableLayout
+            android:id="@+id/tbl_resultado_ok"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+
+            android:layout_gravity="center_horizontal"
+            android:stretchColumns="1,1">
+
+
+
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:layout_column="0">
+
+                <TextView android:text="CEP de origem"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:id="@+id/edt_ceporigem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="digite o cep de origem."
+                    android:paddingTop="3dp"
+                    android:inputType="number"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <TextView android:text="CEP de destino"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/edt_cepdestino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="digite o cep de destino.."
+                    android:paddingTop="3dp"
+                    android:inputType="number"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dimensões"
+                    android:textColor="#ff3f14cc"
+                    android:paddingTop="5dp"/>
+
+
+            </TableRow>
+
+
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:id="@+id/sp_formato" />
+
+
+
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <TextView android:text="Peso em (Kg)"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/edt_peso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="digite o peso (Kg)"
+                    android:paddingTop="3dp"
+                    android:inputType="numberDecimal"/>
+
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <TextView android:text="Comprimeto (cm)"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/edt_comprimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="digite o comprimento (cm)"
+                    android:paddingTop="3dp"
+                    android:inputType="numberDecimal"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <TextView android:text="Altura (cm)"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/edt_altura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="digite altura (cm)"
+                    android:paddingTop="3dp"
+                    android:inputType="numberDecimal"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <TextView android:text="Largura (cm)"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/edt_largura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="digite a largura (cm)"
+                    android:paddingTop="3dp"
+                    android:inputType="numberDecimal"/>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0">
+
+                <TextView android:text="Diametro (cm)"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/edt_diametro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="digite o diametro (cm)"
+                    android:paddingTop="3dp"
+                    android:inputType="numberDecimal"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="-10dp"
+                android:layout_column="0">
+
+                <Button
+                    android:id="@+id/btn_adicionais"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="mostrarOpcionais"
+                    android:text="Opcionais(+)"
+                    android:textColor="#ff3f14cc"
+                    android:background="@android:color/transparent"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/ll_adicionais"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+               android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:stretchColumns="0,1">
+
+                <TableRow
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0">
+
+                    <TextView android:text="Valor declarado (R$)"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/edt_valordeclarado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Valor declarado (R$)"
+                        android:paddingTop="3dp"
+                        android:inputType="numberDecimal"/>
+
+
+                </TableRow>
+
+            </TableLayout>
+
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Serviço mão propria"
+                android:id="@+id/ckb_mao" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="Aviso de recebimento"
+                android:id="@+id/ckb_recebimento" />
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff2c20cc"
+            android:onClick="consultar"
+            android:paddingBottom="5dp"
+            android:textColor="#ffffffff"
+            android:text="Consultar"/>
+
+    </LinearLayout>
+
+</ScrollView>

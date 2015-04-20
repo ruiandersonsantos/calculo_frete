@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:gravity="center_horizontal"
+    tools:context="ruianderson.com.br.calculafrete.SemConexaoActivity">
+
+    <TextView android:text="Sem conexao com a internet !"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="#ffcc0b1b"
+        android:paddingBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@mipmap/sem_conexao"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2" />
+
+    <TextView android:text="Verifique sua conexao!"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="#ffcc0b1b"
+        android:paddingBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

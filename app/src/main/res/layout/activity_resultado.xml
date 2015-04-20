@@ -1,0 +1,404 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+
+        tools:context="ruianderson.com.br.calculafrete.ResultadoActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fffef312"
+            android:background="#ff1a2d8b"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Resultado da consulta"
+            android:textSize="18dp"
+            android:textStyle=""
+            android:gravity="center_horizontal" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            tools:context="ruianderson.com.br.calculafrete.ResultadoActivity">
+
+            <TableLayout
+                android:id="@+id/tbl_resultado_ok"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+
+                android:layout_gravity="center_horizontal"
+                android:stretchColumns="0,1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Codigo do serviço"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_Codigo"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="00000"
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Prazo de entrega"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_PrazoEntrega"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="0 Dias."
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Valor sem adicionais"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_ValorSemAdicionais"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="00,00"
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Valor mao propria"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_ValorMaoPropria"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="00,00"
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Aviso de recebimento"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_ValorAvisoRecebimento"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="00,00"
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Valor declarado"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_ValorDeclarado"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="00,00"
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Entrega domiciliar"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_EntregaDomiciliar"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="NÃO"
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Entrega Sabado"
+                        android:textSize="17dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_EntregaSabado"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="NÂO"
+                        android:textSize="17dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:background="#000000">
+
+                </View>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:layout_column="0">
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="Valor Total"
+                        android:textSize="20dp"
+                        android:textColor="#ff140ccc"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_Valor"
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text="00,00"
+                        android:textSize="20dp"
+                        android:textColor="#ffcc1418"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:paddingLeft="10dp"/>
+
+
+                </TableRow>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/caminhao"
+                        android:id="@+id/imageView_cami"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:textSize="14dp"
+                        android:textColor="#fffef312"
+                        android:background="#ff1a2d8b"
+                        android:text="* - Resultado obtido atraves do WebService dos Correios."/>
+
+
+                </LinearLayout>
+
+
+
+            </TableLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_erro"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_msg_erro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#ffcc1418"
+                    android:textStyle="bold"
+                    android:paddingBottom="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="Mensagen de erro."/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:src="@mipmap/error"
+                    android:id="@+id/iv_advertencia"
+                    android:layout_gravity="center_horizontal" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:src="@mipmap/error_sem_resposta"
+                    android:id="@+id/iv_error"
+                    android:layout_gravity="center_horizontal" />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
